@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const {testUserRoute} = require("../controllers/Users/Users")
 
-router.get('/users',(req,res)=>{
-    res.status(200).json({msg:"this is user route"})
-})
+router.get('/users',testUserRoute)
 
 module.exports = router;
