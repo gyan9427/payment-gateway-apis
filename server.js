@@ -5,8 +5,10 @@ const bodyParser = require("body-parser")
 
 app.use(bodyParser.json());
 const userRoutes = require("./routes/Users");
+const gpayRoutes = require("./routes/Gpay")
 
 app.use("/pga/v1.0",userRoutes);
+app.use("/pga/v1.0/gpaymock",gpayRoutes);
 
 app.listen(3000,()=>{
     mongoose.connect('mongodb://localhost:27017/paymentgateway').then(()=>{
