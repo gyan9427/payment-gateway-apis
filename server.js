@@ -4,6 +4,7 @@ const app = express();
 const bodyParser = require("body-parser")
 const https = require('https');
 const fs = require('fs');
+const {generateFake} = require("./faker/dataFaker")
 
 const options = {
     key: fs.readFileSync(__dirname +'/ssl/privatekey.key','utf-8'),     // Path to the private key file
